@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <style>
+        fieldset {
+            width: 1150px;
+            margin: auto;
+        }
+        #list,#list1 {
+            width: 130px;
+        }
+       .color {
+           margin-right: 80px;
+       }
+        .color1 {
+            width: 50px;
+        }
+        .search {
+            margin-right: 102px;
+        }
+    </style>
+</head>
+<body>
+<form action="handler.php" enctype="multipart/form-data" method="post">
+    <fieldset>
+        <legend>Название формы</legend>
+        <table width="1100" align="center" cellspacing="0">
+            <tr>
+                <td>
+                    <p>
+                        <label for="list">Поле со списком</label>
+                    <select name="select" id="list" tabindex="1">
+                        <option value="#1">Вариант #1</option>
+                        <option value="#2">Вариант #2</option>
+                        <option value="#3">Вариант #3</option>
+                        <option value="#4">Вариант #4</option>
+                        <option value="#5">Вариант #5</option>
+                    </select>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <label for="s" class="search">Поиск:</label>
+                        <input type="search" name="s" placeholder="Что будем искать?" id="s" tabindex="2">
+                    </p>
+                </td>
+                <td>
+                        <input type="number" name="n" step="1" tabindex="3">
+                </td>
+                <td>
+                        <input type="range" min="0" max="10" step="1" tabindex="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <label for="list1">Поле со списком</label>
+                        <select name="select" id="list1" tabindex="5" multiple>
+                            <option value="#1">Вариант #1</option>
+                            <option value="#2">Вариант #2</option>
+                            <option value="#3">Вариант #3</option>
+                            <option value="#4">Вариант #4</option>
+                            <option value="#5">Вариант #5</option>
+                        </select>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <label for="t">Многострочный текст</label>
+                        <textarea name="t" cols="30" rows="10" id="t" tabindex="6"></textarea>
+                    </p>
+                </td>
+                <td>
+                    <input type="radio" name="rb" value="1" tabindex="7">Radio button <br>
+                    <input type="radio" name="rb" value="2">Radio button <br>
+                    <input type="radio" name="rb" value="3">Radio button <br>
+                    <input type="radio" name="rb" value="4">Radio button <br>
+                </td>
+                <td>
+                    <img src="list.jpg" alt="Картинка" width="150">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <label for="c" class="color">Цвет:</label>
+                        <input type="color" name="c" id="c" tabindex="8" class="color1">
+                        <input type="submit" value="Выбрать">
+                    </p>
+                </td>
+                <td>
+                    <input type="file" name="f" tabindex="9">
+                </td>
+                <td>
+                    <input type="submit" tabindex="10">
+                </td>
+                <td>
+                    <input type="reset" tabindex="11">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <p align="center">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ea earum exercitationem impedit magnam
+                    maxime minus provident soluta, tenetur ullam. Aliquid autem explicabo iure libero modi molestias natus
+                    reprehenderit. Dolores.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
