@@ -3,30 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Forms</title>
+    <script>
+    function sizePic() {
+        size = document.getElementById("picture").value;
+        img = document.getElementById("pic");
+        img.width = 60 + 20*size;
+    }
+    </script>
     <style>
         fieldset {
             width: 1150px;
             margin: auto;
         }
-        #list,#list1 {
-            width: 130px;
-            vertical-align: top;
+       .list {
+            width: 125px;
         }
-        #list1 {
-            height: 150px;
-            vertical-align: top;
-        }
-       .color {
+        .color {
            margin-right: 80px;
-           vertical-align: top;
        }
-        .color1 {
-            width: 50px;
-            vertical-align: top;
-        }
         .search {
             margin-right: 102px;
-            vertical-align: top;
         }
         td {
             vertical-align: top;
@@ -41,7 +37,7 @@
             <tr>
                 <td>
                     <label for="list">Поле со списком</label>
-                    <select name="select" id="list" tabindex="1">
+                    <select name="select" id="list" class="list" tabindex="1">
                         <option value="#1">Вариант #1</option>
                         <option value="#2">Вариант #2</option>
                         <option value="#3">Вариант #3</option>
@@ -57,13 +53,13 @@
                         <input type="number" name="n" step="1" tabindex="3">
                 </td>
                 <td>
-                        <input type="range" min="0" max="10" step="1" tabindex="4">
+                        <input id="picture" type="range" min="0" max="10" step="1" oninput="sizePic()" tabindex="4">
                 </td>
             </tr>
             <tr>
                 <td>
                         <label for="list1">Поле со списком</label>
-                        <select name="select" id="list1" tabindex="5" multiple>
+                        <select name="select" id="list1" class="list" tabindex="5" size="9" multiple>
                             <option value="#1">Вариант #1</option>
                             <option value="#2">Вариант #2</option>
                             <option value="#3">Вариант #3</option>
@@ -82,13 +78,13 @@
                     <input type="radio" name="rb" value="4">Radio button <br>
                 </td>
                 <td>
-                    <img src="list.jpg" alt="Картинка" width="150">
+                    <img src="list.jpg" alt="Картинка" width="150" id="pic">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="c" class="color">Цвет:</label>
-                        <input type="color" name="c" id="c" tabindex="8" class="color1" value="#5F9EA0">
+                        <input type="color" name="c" id="c" tabindex="8" value="#5F9EA0">
                         <input type="submit" value="Выбрать">
                 </td>
                 <td>
