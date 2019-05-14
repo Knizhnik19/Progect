@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <style>
+        a:link {
+            color: lightseagreen;
+            font-weight: bold;
+            font-size: large;
+        }
+        a:visited {
+            color: greenyellow;
+        }
+        a:hover {
+            color: darkslategrey;
+        }
+        a:active {
+            color: mediumvioletred;
+        }
+        input:focus {
+            border-color:mediumvioletred;
+        }
+        q:lang(en) {
+            quotes: '\2018' '\2019';
+        }
+        q:lang(fr) {
+            quotes: '« ' ' »';
+        }
+        q:lang(de) {
+            quotes: '\2039' '\203A';
+        }
+        .text:first-letter {
+            font-family: "Times New Roman";
+            color: darkslategrey;
+            font-weight: bold;
+        }
+       b:first-child {
+            color: darkslateblue;
+        }
+        b:last-child {
+            color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+<label for="search"><p>Меню</p></label>
+<input type="search" placeholder = "Что будем искать?" id="search">
+<a href= "../25.04.19/dino.html" target="content"><p>Домашнее задание <strong>24.04.2019</strong></p></a>
+<a href= "../30.04.19/index.html" target="content"><p>Домашнее задание <strong>30.04.2019</strong></p></a>
+<p lang="en" class="text">This <b>English</b> quote has a <b><q>nested</q></b> quote inside.</p>
+<p lang="fr" class="text">This <b>French</b> quote has a <b><q>nested</q></b> quote inside.</p>
+<p lang="de" class="text">This <b>German</b> quote has a <b><q>nested</q></b> quote inside.</p>
+</body>
+</html>
