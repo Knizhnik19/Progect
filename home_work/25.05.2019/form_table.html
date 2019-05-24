@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script>
+        function sizePic() {
+            size = document.getElementById("picture").value;
+            img = document.getElementById("pic");
+            img.width = 40 + 10*size;
+        }
+    </script>
+    <link rel="stylesheet" href="form_table_style.css">
+</head>
+<body>
+<form action="handler.php" enctype="multipart/form-data" method="post">
+    <fieldset>
+        <legend>Название формы</legend>
+
+        <div class="clearfix">
+            <div class="list">
+            <label for="list">Поле со списком</label>
+            <select name="select" id="list"  tabindex="1">
+                <option value="#1">Вариант #1</option>
+                <option value="#2">Вариант #2</option>
+                <option value="#3">Вариант #3</option>
+                <option value="#4">Вариант #4</option>
+                <option value="#5">Вариант #5</option>
+            </select>
+            </div>
+
+            <div class="search">
+            <label for="s" >Поиск:</label>
+            <input type="search" name="s" placeholder="Что будем искать?" id="s" tabindex="2">
+            </div>
+
+            <div class="number">
+            <input type="number" name="n" step="1" tabindex="3" >
+            </div>
+
+            <div class="picture">
+            <input id="picture" type="range" min="0" max="10" step="1" oninput="sizePic()" tabindex="4" >
+            </div>
+
+            <div class="list2">
+            <label for="list1">Поле со списком</label>
+            <select name="select" id="list1" tabindex="5" size="9" multiple>
+                <option value="#1">Вариант #1</option>
+                <option value="#2">Вариант #2</option>
+                <option value="#3">Вариант #3</option>
+                <option value="#4">Вариант #4</option>
+                <option value="#5">Вариант #5</option>
+            </select>
+            </div>
+
+            <div class="textarea">
+            <label for="t">Многострочный текст</label>
+            <textarea name="t" cols="20" rows="10" id="t" tabindex="6"></textarea>
+            </div>
+
+            <div class="radio">
+            <input type="radio" name="rb" value="1" tabindex="7">Radio button <br>
+            <input type="radio" name="rb" value="2">Radio button <br>
+            <input type="radio" name="rb" value="3">Radio button <br>
+            <input type="radio" name="rb" value="4">Radio button <br>
+            </div>
+
+            <img src="list.jpg" alt="Картинка" width="100" id="pic" class="clearfix">
+        </div>
+
+            <div class="color">
+            <label for="c" >Цвет:</label>
+            <input type="color" name="c" id="c" tabindex="8" value="#5F9EA0">
+            <input type="submit" value="Выбрать">
+            </div>
+
+            <input type="file" name="f" tabindex="9" class="file">
+
+        <div class="submit">
+        </div>
+
+        <div class="clearfix">
+            <input type="submit" tabindex="10" >
+            <input type="reset" tabindex="11" class="reset">
+            </div>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga impedit ipsum, molestias
+                mollitia nesciunt pariatur sit temporibus? Aliquam consequatur ipsa laboriosam, quidem saepe temporibus!
+                Ducimus ipsam nobis perferendis reiciendis!
+            </div>
+
+    </fieldset>
+ </body>
+</html>
