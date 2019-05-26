@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    display: flex;
+    position: relative;
+    min-width: 320px;
+    flex-wrap: wrap;
+    border: 1px solid grey;
+    justify-content: stretch;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+    height: 5em;
+    order: 1;
+}
+aside {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid grey;
+    order: 5;
+}
+h2 {
+    width: 100%;
+    height: 3em;
+    text-align: center;
+    border-top: 1px solid grey;
+    order: 2;
+}
+article {
+    width: 50%;
+    height: 2em;
+    text-align: center;
+    border-top: 1px solid grey;
+}
+.col1 {
+    order: 3;
+}
+.col2 {
+    order: 4;
+    border-left: 1px solid grey;
+}
+.none {
+    display: none;
+}
