@@ -4,40 +4,41 @@
     margin: 0;
     padding: 0;
 }
+
 .spinner {
     position: relative;
-    left: 40vw;
-    bottom: -20vh;
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
+    width: 1400px;
+    height: 720px;
     animation-name: spinner_spinning;
-    animation-direction: normal;
     animation-iteration-count: infinite;
     animation-duration: 5s;
+    transform-origin: center;
 }
 .spinner_center {
     position: absolute;
-    left: 48%;
-    bottom: 53%;
+    left: 662.5px;
+    top: 322.5px;
     background-color: orange;
     width: 75px;
     height: 75px;
     transform: rotate(135deg);
     animation-name: spinner_center_spinning;
-    animation-direction: normal;
     animation-iteration-count: infinite;
     animation-duration: 5s;
+    transform-origin: center;
+    animation-direction: reverse;
 }
+
 .circle1, .circle2, .circle3, .circle4, .circle5, .circle6, .circle7, .circle8 {
     background-color: darkslateblue;
     width: 75px;
     height: 75px;
     border-radius: 100%;
     position: absolute;
-    left: 125px;
-    top: 125px;
+    left: 662.5px;
+    top: 322.5px;
 }
+
 .circle1 {
     transform: translateX(150px);
 }
@@ -70,7 +71,8 @@
 }
 @keyframes spinner_center_spinning {
     0% {
-        transform: rotate(315deg);
+        transform: rotate(-360deg);
         animation-timing-function: linear;
     }
 }
+
