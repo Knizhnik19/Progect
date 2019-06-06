@@ -1,0 +1,26 @@
+$background-color-circle: #8B32D2;
+$background-color-center: #EE711B;
+
+$spinner-width: 1400px;
+$spinner-height: 720px;
+
+$circle-width: 75px;
+$circle-height: 75px;
+
+$center-width: 75px;
+$center-height: 75px;
+
+$position-spinner: relative;
+$position-circle: absolute;
+$position-center: absolute;
+
+$animation-iteration-count-spinner: infinite;
+$animation-iteration-count-center: infinite;
+$animation-duration-spinner: 5s;
+$animation-duration-center: 5s;
+$animation-direction-spinner: normal;
+$animation-direction-center: reverse;
+
+$rotate: 0;
+$translateX-circle: 150px;
+

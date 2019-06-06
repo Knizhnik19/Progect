@@ -1,0 +1,69 @@
+@import "src/_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.spinner {
+  position: $position-spinner;
+  width: $spinner-width;
+  height: $spinner-height;
+  animation-name: spinner_spinning;
+  animation-iteration-count: $animation-iteration-count-spinner;
+  animation-duration: $animation-duration-spinner;
+  transform-origin: center;
+}
+.spinner_center {
+  position: $position-center;
+  left: 662.5px;
+  top: 322.5px;
+  background-color: $background-color-center;
+  width: $circle-width;
+  height: $center-height;
+  transform: rotate(135deg);
+  animation-name: spinner_center_spinning;
+  animation-iteration-count: $animation-iteration-count-center;
+  animation-duration: $animation-duration-center;
+  transform-origin: center;
+  animation-direction: $animation-direction-center;
+}
+
+@for $i from 0 through 8{
+  .circle__item-#{$i} {
+    background-color: $background-color-circle;
+    width: $circle-width;
+    height: $circle-height;
+    border-radius: 100%;
+    position: $position-circle;
+    left: 662.5px;
+    top: 322.5px;
+  }
+}
+
+@for $i from 0 through 8 {
+  @if  ($i==0){
+    .circle__item-#{$i} {
+      transform:rotate($rotate) translateX($translateX-circle) ;
+    }
+  }
+  @else {
+    $rotate: $rotate+45deg;
+    .circle__item-#{$i} {
+      transform:rotate($rotate) translateX($translateX-circle) ;
+    }
+  }
+}
+
+@keyframes spinner_spinning {
+  0% {
+    transform: rotate(-360deg);
+    animation-timing-function: linear;
+  }
+}
+@keyframes spinner_center_spinning {
+  0% {
+    transform: rotate(-360deg);
+    animation-timing-function: linear;
+  }
+}
